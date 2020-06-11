@@ -1,0 +1,17 @@
+<div>
+    <h2>Enter a list of words</h2>
+    <form action="/find" method="post">
+        <textarea type="text" name="words" style="width: 100%; height: 50%">{{words}}</textarea>
+        <button type="submit">Submit</button>
+    </form>
+    <div>
+        {{#each examples}}
+        <p>
+            <h3>{{this.word}}</h3>
+            {{#each this.sentences}}
+            <li>{{{this}}}</li>
+            {{/each}}
+        </p>
+        {{/each}}
+    </div>
+</div>
